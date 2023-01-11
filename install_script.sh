@@ -1,5 +1,5 @@
 #!/bin/bash
-# Purpose: Demonstrate usage of select and case with toggleable flags to indicate choices
+# Purpose: Software installation script - to save your time.
 # 2021-12-05 - i2r_devops
 
 choice () {
@@ -22,7 +22,9 @@ do
 	"Docker-Compose ${opts[3]}" \
 	"NodeJS ${opts[4]}" \
 	"Git ${opts[5]}" \
-	"Google-Chrome ${opts[6]}" \
+	"Jetbrains-Toolbox ${opts[6]}" \
+	"Google-Chrome ${opts[7]}" \
+	"Telegram ${opts[8]}" \
 	"Done")
     select opt in "${options[@]}"
     do
@@ -47,11 +49,19 @@ do
                 ./dist/git.sh & 
                 break
                 ;;
-            "Google-Chrome ${opts[6]}")
+            "Jetbrains-Toolbox ${opts[6]}")
+                ./dist/jetbrains-toolbox.sh & 
+                break
+                ;;
+             "Google-Chrome ${opts[7]}")
                 ./dist/google-chrome.sh &
                 break
                 ;;
-            "Done")
+            "Telegram ${opts[8]}")
+                ./dist/telegram-desktop.sh & 
+                break
+                ;;
+             "Done")
                 break 2
                 ;;
             *) printf '%s\n' 'invalid option';;
