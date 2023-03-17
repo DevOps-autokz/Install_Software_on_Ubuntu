@@ -30,35 +30,35 @@ do
     do
         case $opt in
             "Curl ${opts[1]}")
-                ./dist/curl.sh &
+                ./dist/curl.sh
                 break
                 ;;
             "Docker ${opts[2]}")
-                ./dist/docker.sh &
+                ./dist/docker.sh
                 break
                 ;;
             "Docker-Compose ${opts[3]}")
-		./dist/docker-compose.sh &
+		./dist/docker-compose.sh
                 break
                 ;;
             "NodeJS ${opts[4]}")
-                ./dist/nodejs.sh &
+                ./dist/nodejs.sh
                 break
                 ;;
             "Git ${opts[5]}")
-                ./dist/git.sh & 
+                ./dist/git.sh 
                 break
                 ;;
             "Jetbrains-Toolbox ${opts[6]}")
-                ./dist/jetbrains-toolbox.sh & 
+                ./dist/jetbrains-toolbox.sh 
                 break
                 ;;
              "Google-Chrome ${opts[7]}")
-                ./dist/google-chrome.sh &
+                ./dist/google-chrome.sh
                 break
                 ;;
             "Telegram ${opts[8]}")
-                ./dist/telegram-desktop.sh & 
+                ./dist/telegram-desktop.sh
                 break
                 ;;
              "Done")
