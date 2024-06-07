@@ -17,14 +17,15 @@ while :
 do
     clear
     options=( \
-    	"Curl ${opts[1]}" \
+    "Curl ${opts[1]}" \
 	"Docker ${opts[2]}" \
 	"Docker-Compose ${opts[3]}" \
-	"NodeJS ${opts[4]}" \
-	"Git ${opts[5]}" \
-	"Jetbrains-Toolbox ${opts[6]}" \
-	"Google-Chrome ${opts[7]}" \
-	"Telegram ${opts[8]}" \
+	"Golang ${opts[4]}" \
+	"NodeJS ${opts[5]}" \
+	"Git ${opts[6]}" \
+	"Jetbrains-Toolbox ${opts[7]}" \
+	"Google-Chrome ${opts[8]}" \
+	"Telegram ${opts[9]}" \
 	"Done")
     select opt in "${options[@]}"
     do
@@ -45,19 +46,23 @@ do
                 ./dist/nodejs.sh
                 break
                 ;;
-            "Git ${opts[5]}")
-                ./dist/git.sh 
+            "Golang ${opts[5]}")
+                ./dist/install_golang.sh
+                break
+                ;;                
+            "Git ${opts[6]}")
+                ./dist/git.sh
                 break
                 ;;
-            "Jetbrains-Toolbox ${opts[6]}")
-                ./dist/jetbrains-toolbox.sh 
+            "Jetbrains-Toolbox ${opts[7]}")
+                ./dist/jetbrains-toolbox.sh
                 break
                 ;;
-             "Google-Chrome ${opts[7]}")
+             "Google-Chrome ${opts[8]}")
                 ./dist/google-chrome.sh
                 break
                 ;;
-            "Telegram ${opts[8]}")
+            "Telegram ${opts[9]}")
                 ./dist/telegram-desktop.sh
                 break
                 ;;
